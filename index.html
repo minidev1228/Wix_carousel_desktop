@@ -5,46 +5,106 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.css">
-    <style>
-* {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-body { font-family: sans-serif; }
-
-.gallery {
-  background: #EEE;
-}
-
-.gallery-cell {
-  width: 66%;
-  height: 200px;
-  margin-right: 10px;
-  background: #8C8;
-  counter-increment: gallery-cell;
-}
-
-/* cell number */
-.gallery-cell:before {
-  display: block;
-  text-align: center;
-  content: counter(gallery-cell);
-  line-height: 200px;
-  font-size: 80px;
-  color: white;
-}
-    </style>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
-        <div class="gallery-cell"></div>
-        <div class="gallery-cell"></div>
-        <div class="gallery-cell"></div>
-        <div class="gallery-cell"></div>
-        <div class="gallery-cell"></div>
-    </div>
+    <section class="slider-wrapper" style="font-family: Arial, Helvetica, sans-serif;">
+        <button class="slide-arrow" id="slide-arrow-prev">
+          &#8249;
+        </button>
+        <button class="slide-arrow" id="slide-arrow-next">
+          &#8250;
+        </button>
+        <ul class="slides-container" id="slides-container" >
+          <li class="slide">
+            <div class="silde-div">
+                <div style="width: 25%;height: 70%;margin-right: 50px;box-shadow:22px 20px 20px 0 #d9e3fc;">
+                    <img src="./assets/1.png" alt="" width="100%" height="100%">
+                </div>
+                <div style="width: 50%;height: 70%;display: flex;justify-content: center;flex-direction: column;">
+                    <img src="./assets/Pills.png" alt="" style="width: 200px;">
+                    <h2 style="margin-bottom: 5px;">Some App <span style="color: #345bec;">features</span></h2>
+                    <p>These tools give you the control and efficiency needed to find the perfect domain for your online project.</p>
+                    <div style="display: flex;margin-top: 20px;">
+                        <div style="margin-right: 30px;display: flex;align-items: center;flex-direction: column;">
+                            <button style="width: 80px;height: 80px;background-color: #345bec;border: none;border-radius: 10px;"><img src="./assets/window.png" style="width: 30px;" alt=""></button>
+                            <p style="font-size: 12px;">Control panel</p>
+                        </div>
+                        <div style="margin-right: 30px;display: flex;align-items: center;flex-direction: column;">
+                            <button style="width: 80px;height: 80px;background-color: #f9fbf1;border: none;border-radius: 10px;box-shadow:0 4px 8px 0 rgb(0 0 0 / 18%), 0 6px 20px 0 rgb(0 0 0 / 8%);"><img src="./assets/filter.png" style="width: 30px;" alt=""></button>
+                            <p style="font-size: 12px;">Premium filters</p>
+                        </div>
+                        <div style="margin-right: 30px;display: flex;align-items: center;flex-direction: column;">
+                            <button style="width: 80px;height: 80px;background-color: #f9fbf1;border: none;border-radius: 10px;box-shadow:0 4px 8px 0 rgb(0 0 0 / 18%), 0 6px 20px 0 rgb(0 0 0 / 8%);"><img src="./assets/history.png" style="width: 30px;" alt=""></button>
+                            <p style="font-size: 12px;">Search history</p>
+                        </div>
+                    </div>
+                    <p style="font-size: 12px;color: gray;">
+                        Our artificial intelligence app has an intuitive and easy-to-use control panel, which allows users to perform domain searches efficiently. With a clean and organized design, users can quickly access all the app's features, view search results and manage their preferences easily.
+                    </p>
+                </div>
+            </div>
+          </li>
+          <li class="slide">
+            <div class="silde-div">
+                <div style="width: 25%;height: 70%;margin-right: 50px;box-shadow:22px 20px 20px 0 #d9e3fc;">
+                    <img src="./assets/2.png" alt="" width="100%" height="100%">
+                </div>
+                <div style="width: 50%;height: 70%;display: flex;justify-content: center;flex-direction: column;">
+                    <img src="./assets/Pills.png" alt="" style="width: 200px;">
+                    <h2 style="margin-bottom: 5px;">Some App <span style="color: #345bec;">features</span></h2>
+                    <p>These tools give you the control and efficiency needed to find the perfect domain for your online project.</p>
+                    <div style="display: flex;margin-top: 20px;">
+                        <div style="margin-right: 30px;display: flex;align-items: center;flex-direction: column;">
+                            <button style="width: 80px;height: 80px;background-color: #f9fbf1;border: none;border-radius: 10px;"><img src="./assets/filter1(2).png" style="width: 30px;" alt=""></button>
+                            <p style="font-size: 12px;">Control panel</p>
+                        </div>
+                        <div style="margin-right: 30px;display: flex;align-items: center;flex-direction: column;">
+                            <button style="width: 80px;height: 80px;background-color: #345bec;border: none;border-radius: 10px;box-shadow:0 4px 8px 0 rgb(0 0 0 / 18%), 0 6px 20px 0 rgb(0 0 0 / 8%);"><img src="./assets/filter1(1).png" style="width: 30px;" alt=""></button>
+                            <p style="font-size: 12px;">Premium filters</p>
+                        </div>
+                        <div style="margin-right: 30px;display: flex;align-items: center;flex-direction: column;">
+                            <button style="width: 80px;height: 80px;background-color: #f9fbf1;border: none;border-radius: 10px;box-shadow:0 4px 8px 0 rgb(0 0 0 / 18%), 0 6px 20px 0 rgb(0 0 0 / 8%);"><img src="./assets/history.png" style="width: 30px;" alt=""></button>
+                            <p style="font-size: 12px;">Search history</p>
+                        </div>
+                    </div>
+                    <p style="font-size: 12px;color: gray;">
+                        To offer a more personalized search experience, our AI app includes premium filters that allow users to refine their domain searches based on specific criteria. With advanced filtering options, users can segment results based on domain length, extension, availability, and other relevant parameters, giving them greater control and precision in their searches.
+                    </p>
+                </div>
+            </div>
+          </li>
+          <li class="slide">
+            <div class="silde-div">
+                <div style="width: 25%;height: 70%;margin-right: 50px;box-shadow:22px 20px 20px 0 #d9e3fc;">
+                    <img src="./assets/3.png" alt="" width="100%" height="100%">
+                </div>
+                <div style="width: 50%;height: 70%;display: flex;justify-content: center;flex-direction: column;">
+                    <img src="./assets/Pills.png" alt="" style="width: 200px;">
+                    <h2 style="margin-bottom: 5px;">Some App <span style="color: #345bec;">features</span></h2>
+                    <p>These tools give you the control and efficiency needed to find the perfect domain for your online project.</p>
+                    <div style="display: flex;margin-top: 20px;">
+                        <div style="margin-right: 30px;display: flex;align-items: center;flex-direction: column;">
+                            <button style="width: 80px;height: 80px;background-color: #f9fbf1;border: none;border-radius: 10px;"><img src="./assets/filter1(2).png" style="width: 30px;" alt=""></button>
+                            <p style="font-size: 12px;">Control panel</p>
+                        </div>
+                        <div style="margin-right: 30px;display: flex;align-items: center;flex-direction: column;">
+                            <button style="width: 80px;height: 80px;background-color: #f9fbf1;border: none;border-radius: 10px;box-shadow:0 4px 8px 0 rgb(0 0 0 / 18%), 0 6px 20px 0 rgb(0 0 0 / 8%);"><img src="./assets/filter.png" style="width: 30px;" alt=""></button>
+                            <p style="font-size: 12px;">Premium filters</p>
+                        </div>
+                        <div style="margin-right: 30px;display: flex;align-items: center;flex-direction: column;">
+                            <button style="width: 80px;height: 80px;background-color: #345bec;border: none;border-radius: 10px;box-shadow:0 4px 8px 0 rgb(0 0 0 / 18%), 0 6px 20px 0 rgb(0 0 0 / 8%);"><img src="./assets/history4.png" style="width: 30px;" alt=""></button>
+                            <p style="font-size: 12px;">Search history</p>
+                        </div>
+                    </div>
+                    <p style="font-size: 12px;color: gray;">
+                        Our AI application offers users the convenience of accessing a complete history of their domain searches. This feature allows users to review and remember domains they have previously researched, giving them the ability to revisit previous searches, compare results, and track their activity. Additionally, search history makes it easier for users to manage their past research, which can be useful for ongoing projects or for future references.
+                    </p>
+                </div>
+            </div>
+          </li>
+        </ul>
+    </section>
 </body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.pkgd.js"></script>
-</html>  
+<script src="./index.js"></script>
+</html>
